@@ -1,0 +1,153 @@
+.main-head {
+  width: 95%;
+  margin: 0 0 0 auto;
+}
+
+nav {
+  @include flex(space-between, center, row);
+  min-height: 10vh;
+  width: 60%;
+  flex-wrap: wrap;
+  .logo {
+    @include flex(flex-start, center, row);
+    flex: 1 1 10rem;
+    h1 {
+      margin: 2rem;
+    }
+  }
+  ul {
+    @include flex(space-around, center, row);
+    flex: 1 1 40rem;
+  }
+}
+
+.intro {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  flex-wrap: wrap;
+  @include flex(space-between, center, row);
+  h2 {
+    font-size: 8rem;
+    padding-top: 2rem;
+  }
+  h3 {
+    font-size: 6rem;
+    padding: 2rem 0rem;
+  }
+  p {
+    padding-top: 2rem;
+    color: $gray-text;
+  }
+}
+
+.splash {
+  position: absolute;
+  top: 0%;
+  right: 0%;
+  height: 100%;
+  z-index: -1;
+}
+
+.intro-social {
+  margin-top: 4rem;
+  a {
+    margin-right: 5rem;
+  }
+}
+
+.active {
+  background: $gray-text;
+  color: white;
+  padding: 1rem 3rem;
+  border-radius: 2rem;
+}
+
+.intro-text,
+.intro-images {
+  flex: 1 1 40rem;
+}
+
+#flame-left {
+  animation: flame-left 1.7s ease infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes flame-left {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+#flame-right {
+  animation: flame-left 1s ease infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+
+@keyframes flame-right {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+#flower-ball {
+  animation: flower-ball 1.5s ease infinite alternate;
+}
+#flower-left-1 {
+  animation: flower-left-1 1.7s ease infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+@keyframes flower-left-1 {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+#flower-left-2 {
+  animation: flower-left-2 1s ease infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+@keyframes flower-left-2 {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+#flower-right {
+  animation: flower-right 1.2s ease infinite alternate;
+  transform-box: fill-box;
+  transform-origin: bottom;
+}
+@keyframes flower-right {
+  from {
+    transform: rotateZ(-5deg);
+  }
+  to {
+    transform: rotateZ(5deg);
+  }
+}
+
+@keyframes flower-ball {
+  from {
+    transform: translateY(0%);
+  }
+  to {
+    transform: translateY(-30%);
+  }
+}
